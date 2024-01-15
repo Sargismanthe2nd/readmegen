@@ -1,19 +1,42 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if (!license) return '';
+  return `![License](https://img.shields.io/badge/license-${encodeURI(license)}-blue.svg)`;
+}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (!license) return '';
+  return `https://opensource.org/licenses/${encodeURI(license)}`;
+}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (!license) return '';
+  return `## License
 
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+This project is licensed under the ${license} license. For more information see [here](${renderLicenseLink(license)}).`;
+}
 
+function generateMarkdown(answers) {
+  return `
+# ${answers.title}
+
+${answers.description ? `## Description\n\n${answers.description}` : ''}
+
+${answers.tableOfContents ? `## Table of Contents\n\n${answers.tableOfContents}` : ''}
+
+${answers.installation ? `## Installation\n\n${answers.installation}` : ''}
+
+${answers.usage ? `## Usage\n\n${answers.usage}` : ''}
+
+${renderLicenseBadge(answers.license)}
+${renderLicenseSection(answers.license)}
+
+${answers.contributing ? `## Contributing\n\n${answers.contributing}` : ''}
+
+${answers.tests ? `## Tests\n\n${answers.tests}` : ''}
+
+## Questions
+
+Got questions? Reach out to me on [GitHub](https://github.com/${answers.github}) or send me an email at ${answers.email}.
 `;
 }
 
