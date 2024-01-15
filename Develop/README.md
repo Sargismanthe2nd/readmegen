@@ -1,25 +1,25 @@
 
-# 'read me generator'
+# Readme Generator
 
 ## Description
+This project creates a readme when ran and provided information
 
-'this project creates readmes'
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Features](#features)
 
+## Installation
+Download or clone from github.
 
+## Usage
+To run enter 'node index.js' in your terminal while in the folder's directory.
 
+## Credits
 
+https://www.npmjs.com/package/inquirer/v/8.2.4#installation
 
-
-
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-## License
-
-This project is licensed under the MIT license. For more information see [here](https://opensource.org/licenses/MIT).
-
-
-
-
-
-## Questions
-
-Got questions? Reach out to me on [GitHub](https://github.com/sargismanthe2nd) or send me an email at sargismanthe2nd@gmail.com.
+## Features
+Conveniant creation of readme files.

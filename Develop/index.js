@@ -1,13 +1,16 @@
-var inquirer = require('inquirer');
+const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown'); 
 
 const questions = [
     { type: 'input', name: 'title', message: 'What is the title of your project?' },
     { type: 'input', name: 'description', message: 'Enter a description for your project:' },
-    { type: 'list', name: 'license', message: 'Choose a license for your application:', choices: ['MIT', 'GPL-3.0', 'Apache-2.0', 'BSD-3-Clause', 'None'] },
-    { type: 'input', name: 'github', message: 'Enter your GitHub username:' },
-    { type: 'input', name: 'email', message: 'Enter your email address:' }
+    { type: 'input', name: 'installation', message: 'How do you install this prject?' },
+    { type: 'input', name: 'usage', message: 'How do you use this project?' },
+    { type: 'input', name: 'credits', message: 'List your credits and/or contribution guides:' },
+    { type: 'input', name: 'features', message: 'What features does your project provide?' },
+
+    
 ];
 
 function writeToFile(fileName, data) {
@@ -25,6 +28,5 @@ function init() {
         console.error('An error occurred:', error);
     });
 }
-
 
 init();
