@@ -1,8 +1,8 @@
 
-# Readme Generator
+# Read me Generator
 
 ## Description
-This project creates a readme when ran and provided information
+This project creates a readme file with the users inputted information.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -12,14 +12,19 @@ This project creates a readme when ran and provided information
 - [Features](#features)
 
 ## Installation
-Download or clone from github.
+to install this project you will need to install or clone it from the github repo and install node
 
 ## Usage
-To run enter 'node index.js' in your terminal while in the folder's directory.
+to start the project you will go into the folders directory and run 'node index.js'
+![Demo-gif](./Develop/assets/Demo.gif)
 
 ## Credits
 
-https://www.npmjs.com/package/inquirer/v/8.2.4#installation
+![Node](https://nodejs.org/en)
+
+## License
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 
 ## Features
-Conveniant creation of readme files.
+Convenient and efficient way of creating readmes!
